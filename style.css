@@ -84,20 +84,62 @@
     justify-content: space-evenly;
 }
 .player-name{
-width:max-content;
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
+}
+.player-name-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
 }
 .cpu-player{
-width: fit-content;
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
+}
+.cpu-player-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
 }
 .player-card{
-
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
+}
+.player-card-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
 }
 .cpu-card{
-
+    width: 50%;
+    height: 50%;
+border:5px solid black;
+}
+.cpu-card-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
 }
 .player-turn{
-
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
+}
+.player-turn-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black; 
 }
 .cpu-turn{
-
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
+}
+.cpu-turn-output{
+    width: 50%;
+    height: 50%;
+    border:5px solid black;
 }
