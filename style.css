@@ -23,6 +23,9 @@
     height: 400px;
     border:5px solid blue;
     margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .computer{
     width: 200px;
@@ -31,9 +34,9 @@
     margin:0;
 }
 .score-card{
-    width: 5%;
-    height: 50%;
-    border: 5px solid green;
+    width: 7.5%;
+    height: 75%;
+    border: 1px solid green;
     margin:0;
     display: flex;
     flex-direction: column;
@@ -85,61 +88,126 @@
 }
 .player-name{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .player-name-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .cpu-player{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .cpu-player-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .player-card{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .player-card-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .cpu-card{
     width: 50%;
-    height: 50%;
-border:5px solid black;
+    height: 100%;
+border:2px solid black;
+display: flex;
+justify-content: center;
 }
 .cpu-card-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .player-turn{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .player-turn-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black; 
+    height: 100%;
+    border:2px solid black; 
+    display: flex;
+    justify-content: center;
 }
 .cpu-turn{
     width: 50%;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
+}
+.player-card-pic{
+    width: 50%;
     height: 50%;
-    border:5px solid black;
+    border: 5px solid black;
 }
 .cpu-turn-output{
     width: 50%;
-    height: 50%;
-    border:5px solid black;
+    height: 100%;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
+}
+.player-hp{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.player-att{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.player-def{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.player-SP-att{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.player-SP-def{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.player-spd{
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }

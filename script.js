@@ -1,5 +1,9 @@
+let playerCards=[]
+let cpuCards=[]
+let totalPlayerCards = 0
+let totalCpuCards = 0
 
-const pokedex = [
+const pokedex1 = [
     { id: 1,
     name: "Bulbasaur",
     HP: 45,
@@ -302,3 +306,71 @@ const pokedex = [
     img: "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/030.png",
     },
     ]
+
+    function pokeShuffle(){
+        let deckLength = pokedex1.length;
+        let playerCardCount = 0;
+        let cpuCardCount = 0;
+    
+            while (--deckLength > -1){
+                let cardIdx = Math.floor(Math.random()*(deckLength+1));
+                let randomCard = pokedex1.splice(cardIdx, 1);
+                if (playerCardCount > cpuCardCount){
+                    cpuCards.push(randomCard[0]);
+                    cpuCardCount +=1;
+                    totalCpuCards +=1
+                }else{
+                    playerCards.push(randomCard[0]);
+                    playerCardCount +=1
+                    totalPlayerCards +=1
+                }
+            }
+            console.log(playerCardCount, cpuCardCount);
+    }
+    pokeShuffle();
+
+//below holds random cards
+console.log(playerCards);
+console.log(cpuCards);
+
+let playerCardDisplay = document.getElementById("player-card-output-text")
+let cpuCardDisplay = document.getElementById("cpu-card-output-text")
+
+function playerCardAmountOutput(){
+console.log(playerCardDisplay)
+playerCardDisplay.textContent = totalPlayerCards
+}
+playerCardAmountOutput();
+
+function cpuCardAmountOutput(){
+    console.log(cpuCardDisplay)
+    cpuCardDisplay.textContent = totalCpuCards
+}
+cpuCardAmountOutput();
+
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+// remember to change this so that it selects the next card cos i dont like it getting a random card
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+function selectedCard(){
+let playerCardSelector = math.floor((Math.random))
+let cpuCardSelector
+}
+
+// function currentCard() {
+//     // Select a random card from both player's deck
+//     let p1 = Math.floor((Math.random()* p1Cards.length));
+//     let p2 = Math.floor((Math.random()* p2Cards.length));
+
+//     // Put both of the selected cards into play
+//     p1Current.push(p1Cards.splice(p1, 1)[0]);
+//     p2Current.push(p2Cards.splice(p2, 1)[0]);
+
+//     // Used for debugging purposes
+//     console.log(p1Current[0]);
+//     console.log(p1Current[0]);
+
+//     p1CardDisplay.src  = `images/${p1Current[0].img}`;
+//     cpuCardDisplay.src = `images/${p2Current[0].img}`;
+// }
