@@ -16,74 +16,72 @@
     <div class="blank1"></div>
     <div Class="main-board">
       <div class="player">
-        <div class="player-card-pic">pic</div>
+        <div class="player-card-pic"><img id = "player-pic"></img></div>
+        <div id="player-card-name"><p>name</p></div>
         <div class="player-card-body">
-            <div class="player-hp"><p>num</p>
-            <button type="button">player HP</button>
+            <div class="player-hp"><p id="player-hp-display">num</p>
+            <button type="button"id="playerHpButton">player HP</button>
           </div>
-            <div class="player-att"><p>num</p>
-            <button type="button">player Attack</button>
+            <div class="player-att"><p id="player-att-display">num</p>
+            <button type="button"id="playerAttButton">player Attack</button>
           </div>
-            <div class="player-def"><p>num</p>
-            <button type="button">player Defense</button>
+            <div class="player-def"><p id="player-def-display">num</p>
+            <button type="button"id="playerDefButton">player Defense</button>
           </div>
-            <div class="player-SP-att"><p>num</p>
-            <button type="button">player Special Attack</button>
+            <div class="player-SP-att"><p id="player-SPA-display">num</p>
+            <button type="button"id="playerSPattButton">player Special Attack</button>
           </div>
-            <div class="player-SP-def"><p>num</p>
-            <button type="button">player Special Defense</button>
+            <div class="player-SP-def"><p id="player-SPD-display">num</p>
+            <button type="button"id="playerSPdefButton">player Special Defense</button>
           </div>
-            <div class="player-spd"><p>num</p>
-            <button type="button">player Speed</button>
+            <div class="player-spd"><p id="player-SP-display">num</p>
+            <button type="button"id="playerSpdButton">player Speed</button>
           </div>
         </div>
       </div>
       <div class="score-card">
         <div class="score-card-l1">
-          <div class="player-name"style=background-color:yellow><p>player name</p></div>
-          <div class="cpu-player"style=background-color:yellow><p>CPU</p></div>
-        </div>
-        <div class="score-card-l1-output">
-          <div class="player-name-output" style=background-color:lightgreen>playerNameTest1</div>
-          <div class="cpu-player-output" style=background-color:lightgreen>playerNameTest2</div>
+          <div class="player-name"style=background-color:lightgreen><p>player name</p></div>
+          <div class="cpu-player"style=background-color:lightgreen><p>CPU</p></div>
         </div>
         <div class="score-card-l2">
-          <div class="player-card"style=background-color:yellow><p>player card</p></div>
-          <div class="cpu-card"style=background-color:yellow><p>CPU card</p></div>
+          <div class="player-card"style=background-color:yellow><p>player cards remaining</p></div>
+          <div class="cpu-card"style=background-color:yellow><p>CPU cards remaining</p></div>
         </div>
         <div class="score-card-l2-output">
           <div class="player-card-output"style=background-color:lightgreen><p id="player-card-output-text">t</p></div>
           <div class="cpu-card-output"style=background-color:lightgreen><p id="cpu-card-output-text">t</p></div>
         </div>
         <div class="score-card-l3">
-          <div class="player-turn"style=background-color:yellow><p>player turn</p></div>
-          <div class="cpu-turn"style=background-color:yellow><p>CPU turn</p></div>
+          <div class="player-turn"style=background-color:yellow><p>change to winner or loser of round</p></div>
+          <div class="cpu-turn"style=background-color:yellow><p>change to winner or loser of round</p></div>
         </div>
         <div class="score-card-l3-output">
-          <div class="player-turn-output"style=background-color:lightgreen>playerTurnTest1</div>
-          <div class="cpu-turn-output"style=background-color:lightgreen>cpuTurnTest2</div>
+          <div class="player-turn-output"style=background-color:lightgreen>next turn</div>
+          <div class="cpu-turn-output"style=background-color:lightgreen>reset</div>
         </div>
       </div>
       <div class="computer">
-        <div class="computer-card-pic"></div>
+        <div class="computer-card-pic"><img id = "computer-pic"></img></div>
+        <div id="computer-card-name"><p id="computer-card-name">name</p></div>
         <div class="computer-card-body">
-          <div class="computer-hp">
-          <button type="button">computer HP</button>
+          <div class="computer-hp"> <p>HP Stats</p>
+          <div class="computer-hp-stats"><p id="computer-hp-display">num</p></div>
         </div>
-          <div class="computer-att">
-          <button type="button">computer Attack</button>
+          <div class="computer-att"> <p>Attack Stats</p>
+          <div class="computer-att-stats"><p id="computer-att-display">num</p></div>
         </div>
-          <div class="computer-def">
-          <button type="button">computer Defense</button>
+          <div class="computer-def"> <p>Defense Stats</p>
+          <div class="computer-def-stats"><p id="computer-def-display">num</p></div>
         </div>
-          <div class="computer-SP-att">
-          <button type="button">computer Special Attack</button>
+          <div class="computer-SP-att"> <p>Special Attack Stats</p>
+          <div class="computer-spatt-stats"><p id="computer-SPA-display">num</p></div>
         </div>
-          <div class="computer-SP-def">
-          <button type="button">computer Special Defense</button>
+          <div class="computer-SP-def"> <p>Special Defense Stats</p>
+          <div class="computer-spdef-stats"><p id="computer-SPD-display">num</p></div>
         </div>
-          <div class="computer-spd">
-          <button type="button">computer Speed</button>
+          <div class="computer-spd"><p>Speed Stats</p>
+          <div class="computer-spd-stats"><p id="computer-SP-display">num</p></div>
         </div>
       </div>
     </div>
