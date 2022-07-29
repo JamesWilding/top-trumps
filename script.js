@@ -10,7 +10,21 @@ let playerDef = 0
 let playerSPAtt = 0
 let playerSPDef = 0
 let playerSpd = 0
+let singlePlayerCard = 0
+let singleCpuCard = 0
+var hideThis1 = document.getElementById("computer-hp-display");
+var hideThis2 = document.getElementById("computer-att-display");
+var hideThis3 = document.getElementById("computer-def-display");
+var hideThis4 = document.getElementById("computer-SPA-display");
+var hideThis5 = document.getElementById("computer-SPD-display");
+var hideThis6 = document.getElementById("computer-SP-display");
 
+var showThis1 = document.getElementById("computer-hp-display");
+var rehideThis2 = document.getElementById("computer-att-display");
+var rehideThis3 = document.getElementById("computer-def-display");
+var rehideThis4 = document.getElementById("computer-SPA-display");
+var rehideThis5 = document.getElementById("computer-SPD-display");
+var rehideThis6 = document.getElementById("computer-SP-display");
 const pokedex1 = [
     { id: 1,
     name: "Bulbasaur",
@@ -319,7 +333,6 @@ const pokedex1 = [
         let deckLength = pokedex1.length;
         let playerCardCount = 0;
         let cpuCardCount = 0;
-    
             while (--deckLength > -1){
                 let cardIdx = Math.floor(Math.random()*(deckLength+1));
                 let randomCard = pokedex1.splice(cardIdx, 1);
@@ -333,7 +346,7 @@ const pokedex1 = [
                     totalPlayerCards +=1
                 }
             }
-            // console.log(playerCardCount, cpuCardCount);
+            console.log(playerCardCount, cpuCardCount);
     }
     pokeShuffle();
 
@@ -355,10 +368,11 @@ function cpuCardAmountOutput(){
     cpuCardDisplay.innerText = totalCpuCards
 }
 cpuCardAmountOutput();
-
-    let singlePlayerCard = playerCards.shift();
-    let singleCpuCard = cpuCards.shift();
-
+function getCard(){
+    singlePlayerCard = playerCards.shift();
+    singleCpuCard = cpuCards.shift();
+}
+getCard()
 function playerCardStats(){
 document.getElementById("player-card-name").innerText = singlePlayerCard.name;
 document.getElementById("player-hp-display").innerText = singlePlayerCard.HP;
@@ -463,17 +477,47 @@ playerCards.push(singlePlayerCard)
 playerCards.push(singleCpuCard)
 totalPlayerCards = playerCards.length
 totalCpuCards = cpuCards.length
+changeScore()
+playerCardDelay()
+CpuCardDelay()
+showStats1()
     } else {
 console.log("Computer Wins")
 cpuCards.push(singleCpuCard)
 cpuCards.push(singlePlayerCard)
 totalPlayerCards = playerCards.length
 totalCpuCards = cpuCards.length
+changeScore()
+playerCardDelay()
+CpuCardDelay()
+showStats1()
     }
+}
+// function hideStats1 () {
+//     setTimeout(function(){hideThis1.classList.remove("hide-stats")},3000);
+//     console.log("hide-stats");
+// }
+
+function showStats1 () {
+showThis1.classList.remove("hide-stats")
 }
 
 
-// console.log(playerCards)
-// console.log(cpuCards)
+function changeScore(){
+    setTimeout(function(){ playerCardDisplay.innerText = totalPlayerCards; cpuCardDisplay.innerText = totalCpuCards; }, 3000);
+    getCard()
+}
+
+function playerCardDelay() {
+    setTimeout(playerCardStats(),4000)
+}
+function CpuCardDelay() {
+    setTimeout(cpuCardStats(),4000)
+}
+// 
+
+
+// console.log(playerCardDisplay)
+
 // console.log(singlePlayerCard)
 // console.log(singleCpuCard)
