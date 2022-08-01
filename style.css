@@ -2,12 +2,23 @@
     display: flex;
     justify-content: center;
     width: auto;
+    height: 100px;
     padding: 10px;
-    border:5px solid black;
     margin:0;
+    background-color: rgb(130, 209, 235);
+    background-image: url("pokemon\ logo.png");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;       
 }
 .blank1{
-    padding: 50px;
+    width: auto;
+    background-color: rgb(130, 209, 235);
+    height: 100px;
+    background-image: url("TopTrumpsLogo.webp");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;       
 }
 .main-board{
     display: flex;
@@ -15,35 +26,41 @@
     width: auto;
     height: 700px;
     padding: 10px;
-    border:5px solid purple;
-    margin:0;   
+    margin:0;  
+    background-image: url("background1.png");
+    background-size:contain
 }
 /* score card, player card, cpu card main box */
 .player{
-    width: 300px;
-    height: 600px;
-    border:5px solid blue;
+    width: 500px;
+    height: 700px;
     margin:0;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    background-image: url("blank\ pokemon\ card.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
 .hide-stats{
     display: none;
 }
 .computer{
-    width: 300px;
-    height: 600px;
-    border:5px solid red;
+    width: 500px;
+    height: 700px;
     margin:0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("blank\ pokemon\ card.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .score-card{
     width: 7.5%;
     height: 75%;
-    border: 1px solid green;
     margin:0;
     display: flex;
     flex-direction: column;
@@ -75,6 +92,7 @@
     justify-content: space-evenly;
 }
 .score-card-l3{
+    padding-top: 100px;
     width:100%;
     height:100%;
     display: flex;
@@ -82,6 +100,7 @@
     justify-content: space-evenly;
 }
 .score-card-l3-output{
+    padding-top: 100px;
     width:100%;
     height:100%;
     display: flex;
@@ -175,51 +194,52 @@ justify-content: center;
 /* score card insides*/
 /* player stats */
 #player-pic{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
+    padding-top: 25%;
 }
 .player-card-pic{
     width: 50%;
     height: 50%;
-    border: 5px solid black;
+
 }
 .player-hp{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 300px;
 }
 .player-att{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 300px;
 }
 .player-def{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 300px;
 }
 .player-SP-att{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 300px;
 }
 .player-SP-def{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 300px;
 }
 .player-spd{
-    border: 5px solid black;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -228,51 +248,45 @@ justify-content: center;
 /* player stats */
 /* computer card */
 #computer-pic{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
+    padding-top: 25%;
 }
 .computer-card-pic{
     width: 50%;
     height: 50%;
-    border: 5px solid black;
 }
 .computer-hp{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 300px;
 }
 .computer-att{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 300px;
 }
 .computer-def{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 300px;
 }
 .computer-SP-att{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 300px;
 }
 .computer-SP-def{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     width: 300px;
 }
 .computer-spd{
-    border: 5px solid black;
     display: flex;
     justify-content: space-between;
     flex-direction: row;

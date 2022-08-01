@@ -12,19 +12,7 @@ let playerSPDef = 0
 let playerSpd = 0
 let singlePlayerCard = 0
 let singleCpuCard = 0
-var hideThis1 = document.getElementById("computer-hp-display");
-var hideThis2 = document.getElementById("computer-att-display");
-var hideThis3 = document.getElementById("computer-def-display");
-var hideThis4 = document.getElementById("computer-SPA-display");
-var hideThis5 = document.getElementById("computer-SPD-display");
-var hideThis6 = document.getElementById("computer-SP-display");
 
-var showThis1 = document.getElementById("computer-hp-display");
-var rehideThis2 = document.getElementById("computer-att-display");
-var rehideThis3 = document.getElementById("computer-def-display");
-var rehideThis4 = document.getElementById("computer-SPA-display");
-var rehideThis5 = document.getElementById("computer-SPD-display");
-var rehideThis6 = document.getElementById("computer-SP-display");
 const pokedex1 = [
     { id: 1,
     name: "Bulbasaur",
@@ -328,7 +316,7 @@ const pokedex1 = [
     img: "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/030.png",
     },
     ]
-
+// this is shuffling the deck and dishing out the cards at the beginning 
     function pokeShuffle(){
         let deckLength = pokedex1.length;
         let playerCardCount = 0;
@@ -346,33 +334,36 @@ const pokedex1 = [
                     totalPlayerCards +=1
                 }
             }
-            console.log(playerCardCount, cpuCardCount);
+            // console.log(playerCardCount, cpuCardCount);
     }
     pokeShuffle();
 
 //below holds random cards
-// console.log(playerCards);
-// console.log(cpuCards);
+console.log(playerCards);
+console.log(cpuCards);
 
 let playerCardDisplay = document.getElementById("player-card-output-text")
 let cpuCardDisplay = document.getElementById("cpu-card-output-text")
-
-function playerCardAmountOutput(){
-// console.log(playerCardDisplay)
-playerCardDisplay.innerText = totalPlayerCards
+    function playerCardAmountOutput(){
+    // shows the score in the score board
+    playerCardDisplay.innerText = totalPlayerCards
 }
-playerCardAmountOutput();
-
-function cpuCardAmountOutput(){
-    // console.log(cpuCardDisplay)
+    playerCardAmountOutput();
+    function cpuCardAmountOutput(){
+    // shows the score in the score board
     cpuCardDisplay.innerText = totalCpuCards
 }
+
+
+//takes one card out of array and allows me to pull it into the middle
 cpuCardAmountOutput();
 function getCard(){
     singlePlayerCard = playerCards.shift();
     singleCpuCard = cpuCards.shift();
 }
 getCard()
+
+//displays card stats
 function playerCardStats(){
 document.getElementById("player-card-name").innerText = singlePlayerCard.name;
 document.getElementById("player-hp-display").innerText = singlePlayerCard.HP;
@@ -385,7 +376,7 @@ document.getElementById("player-pic").src=singlePlayerCard.img;
 }
 playerCardStats();
 
-
+//displays card stats
 function cpuCardStats(){
 document.getElementById("computer-card-name").innerText = singleCpuCard.name;
 document.getElementById("computer-hp-display").innerText = singleCpuCard.HP;
@@ -398,14 +389,15 @@ document.getElementById("computer-pic").src=singleCpuCard.img;
 }
 cpuCardStats()
 
+//player clicks a button and it compares to CPU stats
 playerHpButton.addEventListener('click', hpStatComp);
 function hpStatComp(){
     if (singlePlayerCard.HP > singleCpuCard.HP){
-        // console.log("player Wins")
         afterClick("player Wins")
+        console.log("player Wins");
     } else if (singlePlayerCard.HP < singleCpuCard.HP){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
+        console.log("CPU Wins");
     } else {
         afterClick("draw")
     }
@@ -413,10 +405,8 @@ function hpStatComp(){
 playerAttButton.addEventListener('click', attStatComp);
 function attStatComp(){
     if (singlePlayerCard.Attack > singleCpuCard.Attack){
-        // console.log("player Wins")
         afterClick("player Wins")
     } else if (singlePlayerCard.Attack < singleCpuCard.Attack){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
     } else {
         afterClick("draw")
@@ -425,10 +415,8 @@ function attStatComp(){
 playerDefButton.addEventListener('click', defStatComp);
 function defStatComp(){
     if (singlePlayerCard.Defense > singleCpuCard.Defense){
-        // console.log("player Wins")
         afterClick("player Wins")
     } else if (singlePlayerCard.Defense < singleCpuCard.Defense){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
     } else {
         afterClick("draw")
@@ -437,10 +425,8 @@ function defStatComp(){
 playerSPattButton.addEventListener('click', spAttStatComp);
 function spAttStatComp(){
     if (singlePlayerCard.SpAttack > singleCpuCard.SpAttack){
-        // console.log("player Wins")
         afterClick("player Wins")
     } else if (singlePlayerCard.SpAttack < singleCpuCard.SpAttack){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
     } else {
         afterClick("draw")
@@ -449,10 +435,8 @@ function spAttStatComp(){
 playerSPdefButton.addEventListener('click', spDefStatComp);
 function spDefStatComp(){
     if (singlePlayerCard.SpDefense > singleCpuCard.SpDefense){
-        // console.log("player Wins")
         afterClick("player Wins")
     } else if (singlePlayerCard.SpDefense < singleCpuCard.SpDefense){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
     } else {
         afterClick("draw")
@@ -461,15 +445,36 @@ function spDefStatComp(){
 playerSpdButton.addEventListener('click', spdStatComp);
 function spdStatComp(){
     if (singlePlayerCard.Speed > singleCpuCard.Speed){
-        // console.log("player Wins")
         afterClick("player Wins")
     } else if (singlePlayerCard.Speed < singleCpuCard.Speed){
-        // console.log("Computer Wins")
         afterClick("computer Wins")
     } else {
         afterClick("draw")
     }
 }
+
+let playerWin = document.getElementById("playerTurn")
+let playerLose = document.getElementById("playerTurn")
+let cpuWin = document.getElementById("cpuTurn")
+let cpuLose = document.getElementById("cpuTurn")
+
+function pWin(){
+    // shows the score in the score board
+    playerWin.innerText = "Win"
+}
+function cWin(){
+    // shows the score in the score board
+    cpuWin.innerText = "Win"
+}
+function pLose(){
+    // shows the score in the score board
+    playerLose.innerText = "Lose"
+}
+function cLose(){
+    // shows the score in the score board
+    cpuLose.innerText = "Lose"
+}
+
 function afterClick (output){
     if (output === "player Wins"){
 console.log("player Wins")
@@ -480,8 +485,9 @@ totalCpuCards = cpuCards.length
 changeScore()
 playerCardDelay()
 CpuCardDelay()
-showStats1()
-    } else {
+pWin()
+cLose()
+    } else if (output === "computer Wins") {
 console.log("Computer Wins")
 cpuCards.push(singleCpuCard)
 cpuCards.push(singlePlayerCard)
@@ -490,8 +496,18 @@ totalCpuCards = cpuCards.length
 changeScore()
 playerCardDelay()
 CpuCardDelay()
-showStats1()
+cWin()
+pLose()
+    } else if (output === "draw") {
+        drawMessage()
+        console.log("draw")
+        bothDraw()
     }
+}
+
+
+function drawMessage() {
+    alert("Draw, Try Again");
 }
 // function hideStats1 () {
 //     setTimeout(function(){hideThis1.classList.remove("hide-stats")},3000);
@@ -503,21 +519,28 @@ showThis1.classList.remove("hide-stats")
 }
 
 
+
 function changeScore(){
-    setTimeout(function(){ playerCardDisplay.innerText = totalPlayerCards; cpuCardDisplay.innerText = totalCpuCards; }, 3000);
+    setTimeout(function(){ playerCardDisplay.innerText = totalPlayerCards; cpuCardDisplay.innerText = totalCpuCards; }, 1);
     getCard()
 }
 
 function playerCardDelay() {
-    setTimeout(playerCardStats(),4000)
+    setTimeout(playerCardStats(),1)
 }
 function CpuCardDelay() {
-    setTimeout(cpuCardStats(),4000)
+    setTimeout(cpuCardStats(),1)
 }
-// 
 
 
-// console.log(playerCardDisplay)
+// document.getElementsByClass("playerTurn").innerText = "Winner";
+// document.getElementsByClass("playerTurn").innerText = "Loser";
+// document.getElementsByClass("playerTurn").innerText = "Draw";
+// document.getElementsByClass("cpuTurn").innerText = "Winner";
+// document.getElementsByClass("cpuTurn").innerText = "Loser";
+// document.getElementsByClass("cpuTurn").innerText = "Draw";
 
-// console.log(singlePlayerCard)
-// console.log(singleCpuCard)
+console.log(playerCardDisplay)
+
+console.log(singlePlayerCard)
+console.log(singleCpuCard)

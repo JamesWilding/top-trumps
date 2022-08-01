@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="style.css" />
     <title>Top Trumps</title>
   </head>
-  <body>
+  <body> 
     <div class="head-page">
-    <h1 id="title">Top Trumps</h1>
     </div>
     <div class="blank1"></div>
     <div Class="main-board">
@@ -41,24 +40,20 @@
       </div>
       <div class="score-card">
         <div class="score-card-l1">
-          <div class="player-name"style=background-color:lightgreen><p>player name</p></div>
-          <div class="cpu-player"style=background-color:lightgreen><p>CPU</p></div>
+          <div class="player-name"style=background-color:red><p>Red</p></div>
+          <div class="cpu-player"style=background-color:blue><p>Blue</p></div>
         </div>
         <div class="score-card-l2">
-          <div class="player-card"style=background-color:yellow><p>player cards remaining</p></div>
-          <div class="cpu-card"style=background-color:yellow><p>CPU cards remaining</p></div>
+          <div class="player-card"style=background-color:lightblue><p>player cards remaining</p></div>
+          <div class="cpu-card"style=background-color:lightblue><p>CPU cards remaining</p></div>
         </div>
         <div class="score-card-l2-output">
-          <div class="player-card-output"style=background-color:lightgreen><p id="player-card-output-text">t</p></div>
-          <div class="cpu-card-output"style=background-color:lightgreen><p id="cpu-card-output-text">t</p></div>
+          <div class="player-card-output"style=background-color:lightblue><p id="player-card-output-text">t</p></div>
+          <div class="cpu-card-output"style=background-color:lightblue><p id="cpu-card-output-text">t</p></div>
         </div>
         <div class="score-card-l3">
-          <div class="player-turn"style=background-color:yellow><p>change to winner or loser of round</p></div>
-          <div class="cpu-turn"style=background-color:yellow><p>change to winner or loser of round</p></div>
-        </div>
-        <div class="score-card-l3-output">
-          <div class="player-turn-output"style=background-color:lightgreen>next turn</div>
-          <div class="cpu-turn-output"style=background-color:lightgreen>reset</div>
+          <div id="playerTurn"><p></p></div>
+          <div id="cpuTurn"><p></p></div>
         </div>
       </div>
       <div class="computer">
